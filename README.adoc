@@ -1,0 +1,30 @@
+=== GRAPHIC EDITOR
+
+This CLI program is intended for applying different filters(transformations) on images.
+
+.You can use these filters(transformations):
+* Right rotate 90°: --rotate or -r option
+* Mirroring: --mirror or -m option
+* inverse filter: --inverse or -i option
+* Convert to grayscale: --bw or -b option
+* Lighten: --lighten <percentage: 0-100> or -l <percentage: 0-100>
+* Darken: --darken <percentage: 0-100> or -d <percentage: 0-100>
+* Unsharp masking: --sharpen or -s option
+
+== Program usage:
+In project root folder type command:
+
+`python editor.py [-h | --help] [-r | --rotate] [-m | --mirror] [-i | --inverse] [-b | --bw] [-s | --sharpen] [-l LIGHTEN] [-d DARKEN] INPUT_IMAGE_PATH OUTPUT_IMAGE_PATH`
+
+.Required arguments are:
+* INPUT_IMAGE_PATH path to the image which you want to work with
+* OUTPUT_IMAGE_PATH path, where you want to save the edited image
+* select at least one transformation(filter)
+
+You are not limited in using optional arguments(filters) as many times as you wish. It means, that you can apply, for example, inverting a few times while editing, or rotate the image twice with '-r -r'. You have to remember, that transformations will be applied in order they were typed in command line
+
+== Testing:
+Test the program with 'pytest'
+
+== Credits:
+Illia Brylov (bryloill) - creator
